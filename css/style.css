@@ -1,0 +1,185 @@
+:root {
+    --yellow-color: #fbff3d;
+}
+
+
+button {
+    border: none;
+    border-radius: 5px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+}
+
+
+.black-border {
+    text-shadow: 1px 0px black,
+                -1px 0 black,
+                0 1px black,
+                0 -1px black;
+}
+
+.yellow-border {
+    text-shadow: 1px 0px var(--yellow-color),
+                -1px 0 var(--yellow-color),
+                0 1px var(--yellow-color),
+                0 -1px var(--yellow-color);
+
+}
+
+/** HEADER ** */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.header img {
+    height: 50px;
+    width: 157px;
+}
+
+.header i {
+    font-size: 30px;
+    color: #252525;
+}
+
+/** SEARCH-BAR **/
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+}
+
+.search-bar input {
+    padding: 10px 0 10px 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: solid;
+    border-right-style: none;
+    border-width: 1px;
+}
+
+.search-bar button {
+    font-size: 30px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #252525;
+    border-style: solid;
+    border-left-style: none;
+    border-width: 1px;
+}
+
+/** IMAGES SECTION **/
+
+.imgs-section {
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../images/kitchen.jpg");
+    height: 80vh;
+    background-size: cover;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+.inside-img h4 {
+    color: var(--yellow-color);
+    font-size: 20px;
+}
+
+.inside-img h1 {
+    font-size: 30px;
+}
+
+.inside-img p {
+    padding: 0 30px;
+    
+}
+
+.imgs-section i {
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+.btn-shop {
+    padding: 10px 50px;
+    border-radius: 50px;
+}
+
+/** CATEGORIES **/
+.categories {
+    width: 90%;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.categories h1 {
+    margin: 50px 0;
+}
+
+.card {
+    position: relative;
+    margin: 30px 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+.btn-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 0;
+    width: 60%;
+    border-radius: 5px;
+}
+
+/** Daily Offer **/
+.week-deal {
+    background-color: var(--yellow-color);
+    text-align: center;
+    padding: 30px 0;
+}
+
+.clock {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.each-number {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    margin: 0 5px;
+    background-color: white;
+}
+
+.each-number p {
+    margin: 10;
+    font-size: 20px;
+}
+
+.each-number h4 {
+    margin: 10px;
+}
+
+.btn-deal {
+    padding: 10px 50px;
+    border-radius: 50px;
+}
