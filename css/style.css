@@ -1,5 +1,5 @@
 :root {
-    --yellow-color: #fbff3d;
+    --orange-color: #E7AB3C;
 }
 
 
@@ -22,10 +22,10 @@ input {
 }
 
 .yellow-border {
-    text-shadow: 1px 0px var(--yellow-color),
-                -1px 0 var(--yellow-color),
-                0 1px var(--yellow-color),
-                0 -1px var(--yellow-color);
+    text-shadow: 1px 0px var(--orange-color),
+                -1px 0 var(--orange-color),
+                0 1px var(--orange-color),
+                0 -1px var(--orange-color);
 
 }
 
@@ -38,8 +38,8 @@ input {
 }
 
 .header img {
-    height: 50px;
-    width: 157px;
+    height: 40px;
+    width: 147px;
 }
 
 .header i {
@@ -91,7 +91,7 @@ input {
 
 
 .inside-img h4 {
-    color: var(--yellow-color);
+    color: var(--orange-color);
     font-size: 20px;
 }
 
@@ -146,7 +146,7 @@ input {
 
 /** Daily Offer **/
 .week-deal {
-    background-color: var(--yellow-color);
+    background-color: var(--orange-color);
     text-align: center;
     padding: 30px 0;
 }
@@ -168,6 +168,7 @@ input {
     width: 70px;
     margin: 0 5px;
     background-color: white;
+    border-radius: 10px;
 }
 
 .each-number p {
@@ -183,3 +184,58 @@ input {
     padding: 10px 50px;
     border-radius: 50px;
 }
+
+/** PROS **/
+.lerma-pros {
+    width: 80%;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.each-pro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pros h1 {
+    margin-bottom: 0;
+}
+
+.each-pro i {
+    font-size: 50px;
+    width: 50px;
+    color: var(--orange-color);
+    margin-right: 50px;
+}
+
+
+/** FOOTER **/
+.footer {
+    background-color: #252525;
+    color: white;
+    padding: 50px 0 30px 0;
+    margin: 0 auto;
+}
+
+.footer img {
+    margin: 15px;
+}
+
+.lerma-info {
+    font-weight: bold;
+}
+
+.lerma-info span {
+    font-weight: lighter;
+}
+
+.info-section {
+    margin: 25px;
+}
+
+.social-media i {
+    font-size: 25px;
+    margin: 0 10px;
+}
+
