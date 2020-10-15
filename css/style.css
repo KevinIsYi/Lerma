@@ -1,7 +1,7 @@
 :root {
     --orange-color: #E7AB3C;
+    --gray-color: #252525;
 }
-
 
 button {
     border: none;
@@ -31,9 +31,9 @@ input {
 
 /** HEADER ** */
 .header {
+    align-items: center;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     margin: 10px 0;
 }
 
@@ -43,50 +43,50 @@ input {
 }
 
 .header i {
+    color: var(--gray-color);
     font-size: 30px;
-    color: #252525;
 }
 
 /** SEARCH-BAR **/
 
 .search-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px;
+    grid-template-columns: 1fr 50px;
+    margin: 15px auto;
+    width: 90%;
 }
 
 .search-bar input {
-    padding: 10px 0 10px 10px;
-    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-style: solid;
     border-right-style: none;
+    border-style: solid;
+    border-top-right-radius: 0;
     border-width: 1px;
+    padding: 10px 0 10px 10px;
 }
 
 .search-bar button {
-    font-size: 30px;
-    background-color: #f2f2f2;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     color: #252525;
-    border-style: solid;
+    background-color: #f2f2f2;
+    border-bottom-left-radius: 0;
     border-left-style: none;
+    border-style: solid;
+    border-top-left-radius: 0;
     border-width: 1px;
+    font-size: 30px;
 }
 
 /** IMAGES SECTION **/
 
 .imgs-section {
-    text-align: center;
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
-    background-image: url("../images/kitchen.jpg");
-    height: 80vh;
-    background-size: cover;
     align-items: center;
+    background-image: url("../images/kitchen.jpg");
+    background-size: cover;
+    display: flex;
+    height: 80vh;
+    justify-content: space-between;
     padding: 0 20px;
+    text-align: center;
 }
 
 
@@ -110,15 +110,15 @@ input {
 }
 
 .btn-shop {
-    padding: 10px 50px;
     border-radius: 50px;
+    padding: 10px 50px;
 }
 
 /** CATEGORIES **/
 .categories {
-    width: 90%;
     margin: 0 auto 50px auto;
     text-align: center;
+    width: 90%;
 }
 
 .categories h1 {
@@ -126,8 +126,8 @@ input {
 }
 
 .card {
-    position: relative;
     margin: 30px 0;
+    position: relative;
 }
 
 .card img {
@@ -135,45 +135,45 @@ input {
 }
 
 .btn-card {
+    border-radius: 5px;
+    left: 50%;
+    padding: 15px 0;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    padding: 15px 0;
     width: 60%;
-    border-radius: 5px;
 }
 
 /** Daily Offer **/
 .week-deal {
     background-color: var(--orange-color);
-    text-align: center;
     padding: 30px 0;
+    text-align: center;
 }
 
 .clock {
+    align-items: center;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: 90%;
     margin: 20px auto;
+    width: 90%;
 }
 
 .each-number {
-    text-transform: uppercase;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 70px;
     margin: 0 5px;
-    background-color: white;
-    border-radius: 10px;
+    text-transform: uppercase;
+    width: 70px;
 }
 
 .each-number p {
-    margin: 10;
     font-size: 20px;
+    margin: 10;
 }
 
 .each-number h4 {
@@ -187,15 +187,15 @@ input {
 
 /** PROS **/
 .lerma-pros {
-    width: 80%;
     margin: 30px auto;
     text-align: left;
+    width: 80%;
 }
 
 .each-pro {
+    align-items: center;
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .pros h1 {
@@ -203,10 +203,10 @@ input {
 }
 
 .each-pro i {
-    font-size: 50px;
-    width: 50px;
     color: var(--orange-color);
+    font-size: 50px;
     margin-right: 50px;
+    width: 40%;
 }
 
 
@@ -214,8 +214,8 @@ input {
 .footer {
     background-color: #252525;
     color: white;
-    padding: 50px 0 30px 0;
     margin: 0 auto;
+    padding: 50px 0 30px 0;
 }
 
 .footer img {
@@ -238,4 +238,3 @@ input {
     font-size: 25px;
     margin: 0 10px;
 }
-
