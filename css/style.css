@@ -81,9 +81,8 @@ input {
 .imgs-section {
     align-items: center;
     background-image: url("../images/kitchen.jpg");
-    background-size: cover;
     display: flex;
-    height: 80vh;
+    height: 70vh;
     justify-content: space-between;
     padding: 0 20px;
     text-align: center;
@@ -131,6 +130,7 @@ input {
 }
 
 .card img {
+    max-width: 100%;
     width: 100%;
 }
 
@@ -200,15 +200,22 @@ input {
 
 .pros h1 {
     margin-bottom: 0;
+    text-align: center;
 }
+
+.pros p {
+    text-align: center;
+}
+
+
 
 .each-pro i {
     color: var(--orange-color);
     font-size: 50px;
     margin-right: 50px;
+    text-align: center;
     width: 40%;
 }
-
 
 /** FOOTER **/
 .footer {
@@ -218,8 +225,8 @@ input {
     padding: 50px 0 30px 0;
 }
 
-.footer img {
-    margin: 15px;
+.info-section img {
+    margin: 15px -5px;
 }
 
 .lerma-info {
@@ -237,4 +244,75 @@ input {
 .social-media i {
     font-size: 25px;
     margin: 0 10px;
+}
+
+/** MEDIA QUERYS **/
+@media (min-width: 480px) {
+    .imgs-section {
+        height: 80vh;
+    }
+
+    .lerma-pros {
+        width: 70%;
+    }    
+
+    .pros {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .categories {
+        align-items: center;
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 600px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info-section {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .clock {
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .lerma-pros {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 50px;
+        width: 90%;
+    }
+    .pros h1 {
+        text-align: left;
+    }
+    .pros p {
+        text-align: left;
+    }
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .info-section {
+        margin: 0 50px;
+    }
 }
