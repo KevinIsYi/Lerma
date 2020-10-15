@@ -85,13 +85,13 @@ input {
 }
 
 .search-bar button {
-    color: #252525;
     background-color: var(--orange-color);
     border-bottom-left-radius: 0;
     border-left-style: none;
     border-style: solid;
     border-top-left-radius: 0;
     border-width: 1px;
+    color: #252525;
     font-size: 30px;
 }
 
@@ -108,17 +108,17 @@ input {
 }
 
 .desktop {
+    align-items: center;
     display: none;
     justify-content: space-around;
-    align-items: center;
 }
 
 .options {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    display: flex;
     font-family: var(--roboto);
     font-size: 20px;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -126,26 +126,25 @@ input {
     margin: 10px 30px;
 }
 
-
 .departments {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-left: 0;
 }
 
 .sign-in {
-    display: flex;
     align-items: center;
+    color: var(--gray-color);
+    display: flex;
     font-size: 35px;
 }
 
-
 .black-line {
-    width: 3px;
-    border-radius: 5px;
     background-color: black;
+    border-radius: 5px;
     height: 25px;
-    margin: 0 10px ;
+    margin: 0 10px;
+    width: 3px;
 }
 
 .imgs-section {
@@ -157,7 +156,6 @@ input {
     padding: 0 20px;
     text-align: center;
 }
-
 
 .inside-img h1 {
     color: var(--orange-color);
