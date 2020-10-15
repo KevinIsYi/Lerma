@@ -49,19 +49,19 @@ input {
 }
 
 /** HEADER ** */
-.header {
+.mobile {
     align-items: center;
     display: flex;
     justify-content: space-around;
     margin: 10px 0;
 }
 
-.header img {
+.mobile img {
     height: 40px;
     width: 147px;
 }
 
-.header i {
+.mobile i {
     color: var(--gray-color);
     font-size: 30px;
 }
@@ -86,7 +86,7 @@ input {
 
 .search-bar button {
     color: #252525;
-    background-color: #f2f2f2;
+    background-color: var(--orange-color);
     border-bottom-left-radius: 0;
     border-left-style: none;
     border-style: solid;
@@ -95,7 +95,58 @@ input {
     font-size: 30px;
 }
 
+.search-bar button:hover {
+    color: var(--orange-color);
+    background-color: var(--gray-color);
+    border-color: black;
+}
+
 /** IMAGES SECTION **/
+
+.header {
+    padding-top: 25px;
+}
+
+.desktop {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--roboto);
+    font-size: 20px;
+    text-align: center;
+}
+
+.options  p {
+    margin: 10px 30px;
+}
+
+
+.departments {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.sign-in {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+
+
+.black-line {
+    width: 3px;
+    border-radius: 5px;
+    background-color: black;
+    height: 25px;
+    margin: 0 10px ;
+}
 
 .imgs-section {
     align-items: center;
@@ -324,6 +375,14 @@ i:hover {
 @media (min-width: 768px) {
     .clock {
         width: 50%;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: flex;
+        margin: auto;
+        width: 90%;
     }
 }
 
