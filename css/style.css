@@ -1,11 +1,15 @@
 :root {
     --orange-color: #E7AB3C;
     --gray-color: #252525;
+    --anton: 'Anton', sans-serif;
+    --roboto: 'Roboto', sans-serif;
 }
 
 button {
     border: none;
     border-radius: 5px;
+    font-family: var(--roboto);
+    font-weight: bold;
 }
 
 input {
@@ -15,18 +19,33 @@ input {
 
 
 .black-border {
-    text-shadow: 1px 0px black,
-                -1px 0 black,
-                0 1px black,
-                0 -1px black;
+    text-shadow: 3px 0px 5px black,
+                -3px 0 5px black,
+                0 3px 5px black,
+                0 -3px 5px black;
 }
 
-.yellow-border {
+.orange-border {
     text-shadow: 1px 0px var(--orange-color),
                 -1px 0 var(--orange-color),
                 0 1px var(--orange-color),
                 0 -1px var(--orange-color);
 
+}
+
+.btn-anim {
+    background-color: var(--orange-color);
+    color: var(--gray-color);
+    border-color: var(--gray-color);
+    border-style: solid;
+    border-width: 3px;
+    transition: all ease-in 0.2s;
+}
+
+.btn-anim:hover {
+    background-color: var(--gray-color);
+    color: var(--orange-color);
+    border-color: var(--orange-color);
 }
 
 /** HEADER ** */
@@ -89,19 +108,12 @@ input {
 }
 
 
-.inside-img h4 {
-    color: var(--orange-color);
-    font-size: 20px;
-}
-
 .inside-img h1 {
-    font-size: 30px;
+    color: var(--orange-color);
+    font-family: var(--anton);
+    font-size: 35px;
 }
 
-.inside-img p {
-    padding: 0 30px;
-    
-}
 
 .imgs-section i {
     font-size: 30px;
@@ -113,19 +125,21 @@ input {
     padding: 10px 50px;
 }
 
+/** EXPLORE CATEGORIES **/
+.explore {
+    margin: 75px;
+    text-align: center;
+}
 /** CATEGORIES **/
+
 .categories {
     margin: 0 auto 50px auto;
     text-align: center;
     width: 90%;
 }
 
-.categories h1 {
-    margin: 50px 0;
-}
-
 .card {
-    margin: 30px 0;
+    margin-bottom: 50px;
     position: relative;
 }
 
@@ -140,6 +154,7 @@ input {
     padding: 15px 0;
     position: absolute;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
 }
@@ -147,6 +162,7 @@ input {
 /** Daily Offer **/
 .week-deal {
     background-color: var(--orange-color);
+    font-family: var(--roboto);
     padding: 30px 0;
     text-align: center;
 }
@@ -181,8 +197,21 @@ input {
 }
 
 .btn-deal {
-    padding: 10px 50px;
+    background-color: var(--gray-color);
+    border-color: var(--gray-color);
     border-radius: 50px;
+    border-style: solid;
+    border-width: 3px;
+    color: white;
+    padding: 10px 50px;
+    transition: all ease-in 0.3s;
+}
+
+.btn-deal:hover {
+    background-color: white;
+    color: var(--gray-color);
+    columns: var(--gray-color);
+    transform: scale(1.05);
 }
 
 /** PROS **/
@@ -207,8 +236,6 @@ input {
     text-align: center;
 }
 
-
-
 .each-pro i {
     color: var(--orange-color);
     font-size: 50px;
@@ -229,21 +256,35 @@ input {
     margin: 15px -5px;
 }
 
-.lerma-info {
-    font-weight: bold;
-}
-
 .lerma-info span {
     font-weight: lighter;
 }
 
 .info-section {
     margin: 25px;
+    text-transform: capitalize;
+}
+
+.info-section h1 {
+    font-family: var(--roboto);
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .social-media i {
-    font-size: 25px;
+    font-size: 28px;
     margin: 0 10px;
+    transition: all ease-in 0.3s;
+}
+
+.link p, i {
+    transition: all ease-in 0.2s;
+}
+
+.link p:hover,
+i:hover {
+    cursor: pointer;
+    color: var(--orange-color);
 }
 
 /** MEDIA QUERYS **/
@@ -291,6 +332,7 @@ input {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 50px;
+        margin: 50px auto;
         width: 90%;
     }
     .pros h1 {
