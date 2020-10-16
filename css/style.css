@@ -17,6 +17,10 @@ input {
     border-radius: 5px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 
 .black-border {
     text-shadow: 3px 0px 5px black,
@@ -150,6 +154,8 @@ input {
 .imgs-section {
     align-items: center;
     background-image: url("../images/kitchen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     height: 70vh;
     justify-content: space-between;
