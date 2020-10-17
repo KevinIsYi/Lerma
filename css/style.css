@@ -143,6 +143,10 @@ a {
     font-size: 35px;
 }
 
+.sign-in i {
+    color: var(--gray-color);
+}
+
 .black-line {
     background-color: black;
     border-radius: 5px;
@@ -154,7 +158,7 @@ a {
 .imgs-section {
     align-items: center;
     background-image: url("../images/kitchen.jpg");
-    background-repeat: no-repeat;
+    background-position: top center;
     background-size: cover;
     display: flex;
     height: 70vh;
@@ -341,6 +345,144 @@ i:hover {
     color: var(--orange-color);
 }
 
+/** Categories **/
+.categories-banner {
+    background-image: url("../images/categories-banner.jpg");
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+}
+
+.categories-banner p {
+    color: var(--orange-color);
+    font-family: var(--anton);
+    font-size: 30px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);   
+}
+
+.show-categories {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+}
+
+.each-section {
+    margin: 50px 0;
+}
+
+.each-section h1 {
+    font-size: 20px;
+    font-family: var(--anton);
+    color: var(--gray-color);
+}
+
+.each-section p {
+    font-family: var(--roboto);
+}
+
+.slider {
+    background-color: var(--gray-color);
+    border-radius: 5px;
+    height: 5px;
+    margin: 10px 0;
+    outline: none;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    background: var(--orange-color);
+    transition: all ease-in 0.25s;
+    
+}
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+}
+
+.filter-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-range button {
+    background-color: var(--orange-color);
+    margin: 10px 0px;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.slider::-moz-range-thumb {
+    background: var(--orange-color);
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    transition: all ease-in 0.25s;
+    width: 20px;
+}
+
+.slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
+}
+
+.cards {
+    margin: 50px 0;
+    display: grid;
+}
+
+.card {
+    display: grid;
+}
+
+.card h1 {
+    font-family: var(--roboto);
+    font-size: 15px;
+    margin: 0;
+}
+
+.card p {
+    font-family: var(--anton);
+    margin: 0;
+}
+
+.card img {
+    height: 340px;
+    margin: 0 auto 30px auto;
+    max-width: 100%;
+    width: 300px;
+}
+
+.price-see {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    width: 90%;
+}
+
+.price-see button {
+    background-color: var(--orange-color);
+    border-radius: 50px;
+    color: var(--gray-color);
+    padding: 10px 20px;
+}
+
 /** MEDIA QUERYS **/
 @media (min-width: 480px) {
     .imgs-section {
@@ -362,6 +504,10 @@ i:hover {
         grid-column-gap: 30px;
         grid-template-columns: repeat(2, 1fr);
     }
+    .cards {
+        grid-column-gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 600px) {
@@ -370,8 +516,18 @@ i:hover {
         grid-template-columns: repeat(2, 1fr);
     }
     .info-section {
-        width: 80%;
         margin: 10px auto;
+        width: 80%;
+    }
+    .show-categories {
+        grid-column-gap: 50px;
+        grid-template-columns: 1fr 3fr;
+    }
+    .show-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -386,6 +542,12 @@ i:hover {
         display: flex;
         margin: auto;
         width: 90%;
+    }
+    .categories-banner {
+        height: 50vh;
+    }
+    .categories-banner p {
+        font-size: 50px;
     }
 }
 
@@ -409,6 +571,12 @@ i:hover {
     .categories {
         grid-template-columns: repeat(3, 1fr);
     }
+    .show-categories {
+        grid-template-columns: 1fr 2fr;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -418,6 +586,13 @@ i:hover {
     }
     .info-section {
         margin: 0 50px;
+    }
+    .show-categories {
+        grid-template-columns: 1fr 4fr;
+        width: 90%;
+    }
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
