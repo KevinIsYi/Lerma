@@ -376,6 +376,10 @@ i:hover {
     margin: 50px 0;
 }
 
+#filter-section p:hover {
+    cursor: pointer;
+}
+
 .each-section h1 {
     font-size: 20px;
     font-family: var(--anton);

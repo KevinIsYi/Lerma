@@ -55,15 +55,15 @@
 
     <section class="show-categories">
         <div class="filters">
-            <div class="each-section">
+            <div id="filter-section" class="each-section">
                 <h1>Categories</h1>
                 <p>All</p>
-                <p>Books</p>
-                <p>Electronics</p>
-                <p>Foods & Drinks</p>
-                <p>Home & Kitchen</p>
-                <p>Sports & Outdoors</p>
-                <p>Pets</p>
+                <p id="L">Books</p>
+                <p id="E">Electronics</p>
+                <p id="A">Foods & Drinks</p>
+                <p id="H">Home & Kitchen</p>
+                <p id="D">Sports & Outdoors</p>
+                <p id="P">Pets</p>
             </div>
             <div class="each-section">
                 <h1>Filters</h1>
@@ -74,47 +74,7 @@
                 </div> 
             </div>
         </div>
-        <div class="cards-product">
-            <div class="card-product">
-                <img src="./images/items/HC10.jpg" alt="hc10">
-                <h1>Refrigerador Hisense RR63D6WBX 6.3 Pies Control Temperatura Semi Automático-Negro</h1>
-                <div class="price-see">
-                    <p>$6117.01</p>
-                    <button>See</button>
-                </div>
-            </div>
-            <div class="card-product">
-                <img src="./images/items/D10.jpg" alt="d10">
-                <h1>Polar Bottle Kids Insulated Water Bottle</h1>
-                <div class="price-see">
-                    <p>$187.79</p>
-                    <button>See</button>
-                </div>
-            </div>
-            <div class="card-product">
-                <img src="./images/items/E09.jpg" alt="e09">
-                <h1>Xiaomi Mi Box S MDZ-22-AB Dispositivo en Tiempo Real</h1>
-                <div class="price-see">
-                    <p>$1322</p>
-                    <button>See</button>
-                </div>
-            </div>
-            <div class="card-product">
-                <img src="./images/items/D02.jpg" alt="d02">
-                <h1>CENTURFIT Caminadora Eléctrica Plegable Uso Rudo Excelente Calidad Gimnasio</h1>
-                <div class="price-see">
-                    <p>$4599</p>
-                    <button>See</button>
-                </div>
-            </div>
-            <div class="card-product">
-                <img src="./images/items/E06.jpg" alt="e06">
-                <h1>Koblenz 00-1582-6 Regulador Negro, Oficina, 1400 VA, 600 W</h1>
-                <div class="price-see">
-                    <p>$323</p>
-                    <button>See</button>
-                </div>
-            </div>
+        <div id="cards-product" class="cards-product">
         </div>
     </section>
 
@@ -154,6 +114,7 @@
         </div>
     </footer>
 
+    <script src="js/conexion.js"></script>
     <script src="js/categories.js"></script>
 </body>
 </html>
