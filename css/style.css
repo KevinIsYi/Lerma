@@ -441,27 +441,27 @@ i:hover {
     transform: scale(1.1);
 }
 
-.cards {
+.cards-product {
     margin: 50px 0;
     display: grid;
 }
 
-.card {
+.card-product {
     display: grid;
 }
 
-.card h1 {
+.card-product h1 {
     font-family: var(--roboto);
     font-size: 15px;
     margin: 0;
 }
 
-.card p {
+.card-product p {
     font-family: var(--anton);
     margin: 0;
 }
 
-.card img {
+.card-product img {
     height: 340px;
     margin: 0 auto 30px auto;
     max-width: 100%;
