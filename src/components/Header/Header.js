@@ -1,0 +1,28 @@
+import React from 'react';
+
+import { VscAccount } from 'react-icons/vsc';
+import { GrCart } from 'react-icons/gr';
+
+import './Header.css';
+
+export const Header = () => {
+
+    const logoImageName = 'lerma-logo';
+
+    return (
+        <header className="container center">
+            <img className="lerma-logo" src={ require(`../../assets/icons/${ logoImageName }.png`) } alt={ logoImageName } />
+            <div className="menu center-text">
+                <p className="header-menu">Departments</p>
+                <p className="header-menu">About Us</p>
+                <p className="header-menu">Shop</p>
+                <p className="header-menu">Contact</p>
+            </div>
+            <div className="sign-in-section">
+                <VscAccount className="icon" />
+                <div className="division" />
+                <GrCart className="icon" />
+            </div>
+        </header>
+    )
+}

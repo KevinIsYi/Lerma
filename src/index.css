@@ -1,0 +1,44 @@
+:root {
+  --orange-color: #E7AB3C;
+  --gray-color: #252525;
+  --anton: 'Anton', sans-serif;
+  --roboto: 'Roboto', sans-serif;
+}
+
+button {
+  border-style: none;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+}
+
+.center {
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.black-border {
+  text-shadow: 3px 0px 5px black,
+              -3px 0 5px black,
+              0 3px 5px black,
+              0 -3px 5px black;
+}
+
+.orange-border {
+  text-shadow: 1px 0px var(--orange-color),
+              -1px 0 var(--orange-color),
+              0 1px var(--orange-color),
+              0 -1px var(--orange-color);
+
+}
+
+.lerma-logo {
+  height: 40px;
+}
+
+

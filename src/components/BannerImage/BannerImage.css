@@ -1,0 +1,46 @@
+.img-section {
+    background-image: url('../../assets/imgs/computer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    margin: 40px -10px;
+    position: relative;
+}
+
+.inside-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.inside-img button {
+    padding: 10px 30px;
+    font-family: var(--roboto);
+    border-radius: 50px;
+    font-size: 15px;
+    border-width: 3px;
+    border-style: groove;
+    border-color: var(--orange-color);
+    color: var(--orange-color);
+    text-transform: uppercase;
+    background-color: var(--gray-color);
+    transition: all ease-in 0.3s;
+}
+
+.inside-img button:hover {
+    border-color: var(--gray-color);
+    background-color: var(--orange-color);
+    color: var(--gray-color);
+    cursor: pointer;
+}
+
+.inside-img h1 {
+    font-family: var(--anton);
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--orange-color);
+}
