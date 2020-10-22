@@ -10,7 +10,7 @@ export const Header = () => {
     const logoImageName = 'lerma-logo';
 
     return (
-        <header className="container center">
+        <header className="header container center">
             <img className="lerma-logo" src={ `./assets/icons/${ logoImageName }.png` } alt={ logoImageName } />
             <div className="menu center-text">
                 <p className="header-menu">Departments</p>

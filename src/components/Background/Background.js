@@ -13,7 +13,7 @@ export const Background = () => {
             <h2>Expires in</h2>
             <Clock />
 
-            <button className="btn-deal center">Find Out</button>
+            <button className="btn btn-deal center">Find Out</button>
         </div>
     )
 }

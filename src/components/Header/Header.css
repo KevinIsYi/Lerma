@@ -1,4 +1,4 @@
-header {
+.header {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -17,15 +17,17 @@ header {
 }
 
 .menu p {
-    padding: 5px 10px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     font-size: 20px;
+    padding: 5px 10px;
     text-align: center;
+    transition: all ease-in 0.3s;
 }
 
 .menu p:hover {
     cursor: pointer;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
     border-bottom-color: black;
 }
 

@@ -8,7 +8,7 @@ export const BannerImage = () => {
         <div className="img-section">
             <div className="inside-img">
                 <h1 className="black-border">Everything for your Laptop</h1>
-                <button className="center">Botón</button>
+                <button className="btn center">Botón</button>
             </div>
         </div>
     )
