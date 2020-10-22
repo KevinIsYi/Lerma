@@ -11,7 +11,7 @@ export const Header = () => {
 
     return (
         <header className="container center">
-            <img className="lerma-logo" src={ require(`../../assets/icons/${ logoImageName }.png`) } alt={ logoImageName } />
+            <img className="lerma-logo" src={ `./assets/icons/${ logoImageName }.png` } alt={ logoImageName } />
             <div className="menu center-text">
                 <p className="header-menu">Departments</p>
                 <p className="header-menu">About Us</p>

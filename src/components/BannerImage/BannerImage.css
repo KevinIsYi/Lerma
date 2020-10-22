@@ -1,5 +1,5 @@
 .img-section {
-    background-image: url('../../assets/imgs/computer.jpg');
+    background-image: url('./BannerImage.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

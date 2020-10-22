@@ -3,3 +3,11 @@
     font-family: var(--anton);
     margin-bottom: 20px;
 }
+
+.landing-cards {
+    margin: 20px auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+}
