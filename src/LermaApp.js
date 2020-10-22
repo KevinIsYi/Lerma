@@ -1,4 +1,5 @@
 import React from 'react';
+import { Background } from './components/Background/Background';
 
 import { BannerImage } from './components/BannerImage/BannerImage';
 import { Cards } from './components/Cards/Cards';
@@ -13,6 +14,7 @@ export const LermaApp = () => {
             <SearchBar />
             <BannerImage />
             <Cards />
+            <Background />
         </>
     )
 }

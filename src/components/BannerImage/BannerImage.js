@@ -3,6 +3,7 @@ import React from 'react';
 import './BannerImage.css';
 
 export const BannerImage = () => {
+
     return (
         <div className="img-section">
             <div className="inside-img">
