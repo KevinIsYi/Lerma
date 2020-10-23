@@ -1,3 +1,8 @@
+.img-section{
+    align-items: center;
+
+}
+
 .inside-img {
     position: absolute;
     left: 50%;
@@ -31,6 +36,12 @@
 .inside-img h1 {
     font-family: var(--anton);
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
     color: var(--orange-color);
+}
+
+@media (min-width: 768px) {
+    .inside-img h1 {
+        font-size: 50px;
+    }
 }

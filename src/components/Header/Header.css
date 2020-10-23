@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    width: 95%;
 }
 
 .header-menu {
@@ -52,4 +53,16 @@
 .icon:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media (min-width: 900px) {
+    .header {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        width: 80%;
+    }
 }

@@ -20,7 +20,7 @@ export const BannerImage = ({ image, imageText, botonText }) => {
     };
 
     return (
-        <div style={ imgSection }>
+        <div style={ imgSection } className="img-section">
             <div className="inside-img">
                 <h1 className="black-border">{ imageText }</h1>
                 <button className="btn center">{ botonText }</button>
