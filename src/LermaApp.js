@@ -14,7 +14,10 @@ export const LermaApp = () => {
         <>
             <Header />
             <SearchBar />
-            <BannerImage />
+            <BannerImage 
+                image="BannerImage" 
+                imageText="Everything for your Laptop"
+                botonText="Shop"/>
             <Cards />
             <Background />
             <LermaPros />

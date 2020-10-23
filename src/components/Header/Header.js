@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { VscAccount } from 'react-icons/vsc';
 import { GrCart } from 'react-icons/gr';
@@ -8,6 +8,10 @@ import './Header.css';
 export const Header = () => {
 
     const logoImageName = 'lerma-logo';
+
+    const [size, setSize] = useState(window.innerWidth);
+    const [change, setChange] = useState(false);
+
 
     return (
         <header className="header container center">

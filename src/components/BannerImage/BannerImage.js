@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './BannerImage.css';
 
-export const BannerImage = ({ url }) => {
+export const BannerImage = ({ image, imageText, botonText }) => {
 
-    const backImage = (url === undefined) ? '#E7AB3C' : require(`./${ url }.jpg`);
+    const backImage = (image === undefined) ? '#E7AB3C' : require(`./${ image }.jpg`);
 
     const imgSection = {
         backgroundColor: backImage,
@@ -21,9 +22,15 @@ export const BannerImage = ({ url }) => {
     return (
         <div style={ imgSection }>
             <div className="inside-img">
-                <h1 className="black-border">Everything for your Laptop</h1>
-                <button className="btn center">Botón</button>
+                <h1 className="black-border">{ imageText }</h1>
+                <button className="btn center">{ botonText }</button>
             </div>
         </div>
     )
+}
+
+
+BannerImage.propTypes = {
+    imageText: PropTypes.string.isRequired,
+    botonText: PropTypes.string.isRequired
 }

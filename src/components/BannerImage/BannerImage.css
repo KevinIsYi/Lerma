@@ -1,13 +1,3 @@
-.img-section {
-    background-image: url('./BannerImage.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-    margin: 40px 0;
-    position: relative;
-}
-
 .inside-img {
     position: absolute;
     left: 50%;
