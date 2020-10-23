@@ -11,18 +11,20 @@ export const Footer = () => {
 
     return (
         <footer className="footer">
-            <AboutUs />
-            <SocialMedia />
+            <div className="footer-container">
+                <AboutUs />
+                <SocialMedia />
 
-            {
-                footerInfo.map(({ h1, p }) => (
-                    <InfoSection 
-                        key = { h1 }
-                        h1 = { h1 }
-                        p = { p }
-                    />
-                ))
-            }
+                {
+                    footerInfo.map(({ h1, p }) => (
+                        <InfoSection 
+                            key = { h1 }
+                            h1 = { h1 }
+                            p = { p }
+                        />
+                    ))
+                }
+            </div>
 
         </footer>
     )

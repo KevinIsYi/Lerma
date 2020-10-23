@@ -1,9 +1,8 @@
 .lerma-pros {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
+    grid-row-gap: 25px;
     margin: 30px auto;
-    text-align: left;
+    text-align: center;
     width: 90%;
 }
 
@@ -16,7 +15,6 @@
 .lerma-pro-icon {
     color: var(--orange-color);
     font-size: 50px;
-    margin-right: 50px;
     text-align: center;
     width: 40%;
 }
@@ -29,4 +27,21 @@
 
 .pros h1 {
     margin: 0;
+}
+
+@media (min-width: 768px) {
+    .lerma-pros {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 50px;
+        text-align: left;
+    }
+    .lerma-pro-icon {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .lerma-pro-icon {
+        margin-right: 50px;
+    }
 }
