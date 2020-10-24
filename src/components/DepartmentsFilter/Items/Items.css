@@ -25,6 +25,9 @@
 
 .card-item {
     position: relative;
+    background-color: #f8f1ea;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .price-see {
@@ -33,7 +36,7 @@
     justify-content: space-between;
     left: 50%;
     position: absolute;
-    top: 0%;
+    top: 5%;
     transform: translateX(-50%);
     margin: 10px auto;
     width: 80%;
