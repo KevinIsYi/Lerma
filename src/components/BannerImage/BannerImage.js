@@ -14,7 +14,7 @@ export const BannerImage = ({ image, imageText, botonText }) => {
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         height: '50vh',
-        margin: '40px 0',
+        margin: '0 0 40px 0',
         position: 'relative',
         textAlign: 'center'
     };
