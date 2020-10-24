@@ -1,0 +1,25 @@
+.show-categories {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+}
+
+
+.filter-section {
+    color: var(--gray-color);
+    font-family: var(--roboto);
+}
+
+.filter-section h1 {
+    font-family: var(--anton);
+    font-size: 25px;
+}
+
+.filter-section p {
+    transition: all ease-in 0.3s;
+}
+
+.filter-section p:hover {
+    color: var(--orange-color);
+    cursor: pointer;
+}

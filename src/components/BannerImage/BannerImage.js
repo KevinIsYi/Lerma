@@ -10,7 +10,7 @@ export const BannerImage = ({ image, imageText, botonText }) => {
     const imgSection = {
         backgroundColor: backImage,
         backgroundImage: `url(${ backImage })`, // Won't be valid css if url is undefined, so it won't be applied
-        backgroundPosition: 'center',
+        backgroundPosition: 'top center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         height: '50vh',
