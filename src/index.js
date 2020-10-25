@@ -6,7 +6,7 @@ import { AppRouter } from './routers/AppRouter';
 import './index.css';
 import './normalize.css';
 
-ReactDOM.render(
+ReactDOM.render (
     <AppRouter />,
   document.getElementById('root')
 );
