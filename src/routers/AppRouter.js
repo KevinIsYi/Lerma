@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 import { LandingPageRouter } from './LandingPageRouter';
-import { LogInScreen } from '../components/LogInScreen/LogInScreen';
 import { UserContext } from '../UserContext';
+import { LogInScreen } from '../components/LoginScreen/LoginScreen';
 
 export const AppRouter = () => {
 
