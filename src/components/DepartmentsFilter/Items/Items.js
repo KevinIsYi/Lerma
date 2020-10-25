@@ -9,7 +9,7 @@ export const Items = ({ items }) => {
             {
                 items.map(({ id, name, price }) => (
                     <div className="card-item" key={ id } >
-                        <img src={ `./assets/items/${ id }.jpg` } />
+                        <img src={ `./assets/items/${ id }.jpg` } alt={ id }/>
                         <h1>{ name }</h1>
                         <div className="price-see">
                             <p>${ price }</p>

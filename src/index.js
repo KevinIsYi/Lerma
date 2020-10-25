@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { LermaApp } from './LermaApp';
+import { AppRouter } from './routers/AppRouter';
+
 import './index.css';
 import './normalize.css';
 
+
 ReactDOM.render(
-    <LermaApp />,
+    <AppRouter />,
   document.getElementById('root')
 );
