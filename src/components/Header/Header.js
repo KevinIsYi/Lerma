@@ -6,6 +6,7 @@ import { GrCart } from 'react-icons/gr';
 import { FaBars }  from 'react-icons/fa';
 
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
 
@@ -25,7 +26,9 @@ export const Header = () => {
                         mobile && (
                             <>
                                 <FaBars className="icon"/>
-                                <img className="lerma-logo" src={ `./assets/icons/${ logoImageName }.png` } alt={ logoImageName } />
+                                <Link to="/ ">
+                                    <img className="lerma-logo" src={ `./assets/icons/${ logoImageName }.png` } alt={ logoImageName } />
+                                </Link>
                                 <GrCart className="icon" />
                             </>
                         )
@@ -33,15 +36,17 @@ export const Header = () => {
                     {
                         desktop && (
                             <>
-                                <img className="lerma-logo" src={ `./assets/icons/${ logoImageName }.png` } alt={ logoImageName } />
+                                <Link to="/ ">
+                                    <img className="lerma-logo" src={ `./assets/icons/${ logoImageName }.png` } alt={ logoImageName } />
+                                </Link>
                                 <div className="menu center-text">
-                                    <p className="header-menu">Departments</p>
+                                    <Link to="/categories"><p className="header-menu">Departments</p></Link>
                                     <p className="header-menu">About Us</p>
                                     <p className="header-menu">Shop</p>
                                     <p className="header-menu">Contact</p>
                                 </div>
                                 <div className="sign-in-section">
-                                    <VscAccount className="icon" />
+                                    <Link to="/login"><VscAccount className="icon" /></Link>
                                     <div className="division" />
                                     <GrCart className="icon" />
                                 </div>

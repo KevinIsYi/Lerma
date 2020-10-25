@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { 
-    BrowserRouter as Router,
     Switch,
-    Route, 
+    Route,
     Redirect
 } from 'react-router-dom';
 
@@ -22,7 +21,6 @@ export const LandingPageRouter = () => {
     return (
         <>
             <Header />
-
                 <>
                     <Switch>
                         <Route path="/ " component={ LandingScreen } />

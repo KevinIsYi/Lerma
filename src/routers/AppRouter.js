@@ -3,23 +3,24 @@ import React from 'react'
 import { 
     BrowserRouter as Router,
     Switch,
-    Route, 
-    Redirect
+    Route
 } from 'react-router-dom';
 
-import { LoginScreen } from '../components/LoginScreen/LoginScreen';
+import { LogInScreen } from '../components/LogInScreen/LogInScreen';
+
+
 import { LandingPageRouter } from './LandingPageRouter';
 
 export const AppRouter = () => {
     return (
         <Router>
+            <>
                 <Switch>
-                    <>
-                        <Route exact path="/login" component={ LoginScreen } />
+                        <Route exact path="/login" component={ LogInScreen } />
                         <Route path="/" component={ LandingPageRouter }/>
 
-                    </>
                 </Switch>
+            </>
         </Router>
     )
 }

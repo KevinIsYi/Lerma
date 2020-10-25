@@ -21,6 +21,7 @@
     border-bottom-color: white;
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    color: var(--gray-color);
     font-size: 20px;
     padding: 5px 10px;
     text-align: center;

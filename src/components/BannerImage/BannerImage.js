@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './BannerImage.css';
+import { Link } from 'react-router-dom';
 
 export const BannerImage = ({ image, imageText, botonText }) => {
 
@@ -23,7 +24,7 @@ export const BannerImage = ({ image, imageText, botonText }) => {
         <div style={ imgSection } className="img-section">
             <div className="inside-img">
                 <h1 className="black-border">{ imageText }</h1>
-                <button className="btn center">{ botonText }</button>
+                <Link to="/categories"><button className="btn center">{ botonText }</button></Link>
             </div>
         </div>
     )

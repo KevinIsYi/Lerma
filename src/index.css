@@ -5,6 +5,11 @@
   --roboto: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--gray-color);
+}
+
 button {
   border-style: none;
   font-weight: bold;
