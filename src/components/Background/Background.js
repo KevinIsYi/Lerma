@@ -3,7 +3,6 @@ import { Clock } from '../Clock/Clock';
 
 import './Background.css';
 
-
 export const Background = () => {
 
     return (

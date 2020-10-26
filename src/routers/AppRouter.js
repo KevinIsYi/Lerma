@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { LandingPageRouter } from './LandingPageRouter';
-import { UserContext } from '../UserContext';
+import { UserContext } from '../hooks/useUserContext';
 import { LogInScreen } from '../components/LogInScreen/LogInScreen';
 
 export const AppRouter = () => {

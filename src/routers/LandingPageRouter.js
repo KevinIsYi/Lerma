@@ -12,8 +12,6 @@ import { LandingScreen } from '../components/LandingScreen/LandingScreen';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
 
-
-
 export const LandingPageRouter = () => {
 
     return (

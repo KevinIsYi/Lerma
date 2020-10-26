@@ -1,12 +1,12 @@
 import React from 'react';
 import Media from 'react-media';
+import { Link } from 'react-router-dom';
 
 import { VscAccount } from 'react-icons/vsc';
 import { GrCart } from 'react-icons/gr';
 import { FaBars }  from 'react-icons/fa';
 
 import './Header.css';
-import { Link } from 'react-router-dom';
 
 export const Header = () => {
 

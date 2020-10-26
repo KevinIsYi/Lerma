@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { FaUser, FaLock, FaAt } from 'react-icons/fa';
 import { Link, Redirect } from 'react-router-dom';
-import { UserContext } from '../../UserContext';
+import { UserContext } from '../../hooks/useUserContext';
 
 import { isValidUser } from '../../helpers/IsValidUser';
 import { useForm } from '../../hooks/useForm';
@@ -37,7 +37,6 @@ export const LogInScreen = ({ history }) => {
 
     const formSubmit = (e) => {
         e.preventDefault();
-        console.log("aqui");
         if (signIn) {
             if (isValidUser(formValues)) {
                 setLogged(true);

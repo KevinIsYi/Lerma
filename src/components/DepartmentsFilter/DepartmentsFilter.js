@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
+import { Items } from './Items/Items';
+
+import { data } from '../../data/data';
+import { getDataByCategory } from '../../selectors/getDataByCategory';
 
 import './DepartmentsFilter.css';
-import { data } from '../../data/data';
-import { Items } from './Items/Items';
-import { getDataByCategory } from '../../selectors/getDataByCategory';
 
 export const DepartmentsFilter = () => {
 
@@ -38,6 +39,7 @@ export const DepartmentsFilter = () => {
             category: 'Pets'
         }
     ];
+
     const { products } = data;
     const [ arrayItems, setArrayItems ] = useState(products);
 
