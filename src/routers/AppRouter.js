@@ -8,7 +8,7 @@ import {
 
 import { LandingPageRouter } from './LandingPageRouter';
 import { UserContext } from '../UserContext';
-import { LogInScreen } from '../components/LoginScreen/LoginScreen';
+import { LogInScreen } from '../components/LogInScreen/LogInScreen';
 
 export const AppRouter = () => {
 
