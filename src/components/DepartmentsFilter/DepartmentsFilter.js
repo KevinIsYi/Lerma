@@ -1,22 +1,69 @@
 import React, { useState } from 'react'
 
-import { data } from '../../data/data';
-import { Items } from './Items/Items';
 
 import './DepartmentsFilter.css';
+import { data } from '../../data/data';
+import { Items } from './Items/Items';
+import { getDataByCategory } from '../../selectors/getDataByCategory';
 
 export const DepartmentsFilter = () => {
 
-    const categories = [  'All', 'Books', 'Electronics', 'Foods & Drinks', 'Home & Kitchen', 'Sports & Outdoors', 'Pets' ];
-    const [ sliderValue, setSliderValue ] = useState(100);
-    const [ range, setRange ] = useState(sliderValue);
+    const categories = [
+        {
+            id: '0',
+            category: 'All'
+        },
+        {
+            id: 'L',
+            category: 'Books'
+        },
+        {
+            id: 'E',
+            category: 'Electronics'
+        },
+        {
+            id: 'A',
+            category: 'Foods & Drinks'
+        },
+        {
+            id: 'H',
+            category: 'Home & Kitchen'
+        },
+        {
+            id: 'D',
+            category: 'Sports & Outdoors'
+        },
+        {
+            id: 'P',
+            category: 'Pets'
+        }
+    ];
     const { products } = data;
+    const [ arrayItems, setArrayItems ] = useState(products);
+
+    const [ values, setValues ] = useState({
+        text: '',
+        sliderValue: 15000,
+        currentKey: '0'
+    });
+
+    const { sliderValue } = values;
 
     const changeRange = (e) => {
-        setSliderValue(e.target.value);
-        setRange(sliderValue);
+        setValues({
+            ...values,
+            sliderValue: e.target.value
+        });
+        setArrayItems(getDataByCategory({...values, sliderValue: e.target.value}))
     }
 
+    const categoryClic = (id) => {
+        setValues({
+            ...values,
+            currentKey: id,
+        });
+        setArrayItems(getDataByCategory({...values, currentKey: id})); 
+    }
 
     return (
         <section className="show-categories">
@@ -24,8 +71,8 @@ export const DepartmentsFilter = () => {
                 <div className="filter-section">
                     <h1>Categories</h1>
                     {
-                        categories.map(category => (
-                            <p key={ category[0] }>{ category }</p>
+                        categories.map(({ id, category }) => (
+                            <p key={ id } onClick={ () => categoryClic(id) }>{ category } </p>
                         ))
                     }
                 </div>
@@ -34,11 +81,11 @@ export const DepartmentsFilter = () => {
                     <input className="slider" type="range" min="0" max="15000" value={ sliderValue } onChange={ changeRange }/>
                     <div className="filter-price-slider-options">
                         <button className="btn">Filter</button>
-                        <p>Range: $0 - ${ range }</p>
+                        <p>Range: $0 - ${ sliderValue }</p>
                     </div>
                 </div>
             </div>
-            <Items items={ products } />
+            <Items items={ arrayItems }/>
         </section>
     )
 }

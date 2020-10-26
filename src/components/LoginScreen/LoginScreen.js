@@ -8,7 +8,7 @@ import { useForm } from '../../hooks/useForm';
 
 import './LogInScreen.css';
 
-export const LogInScreen = () => {
+export const LogInScreen = ({ history }) => {
 
     const { isLogged, setLogged } = useContext(UserContext);
 
@@ -41,7 +41,6 @@ export const LogInScreen = () => {
         if (signIn) {
             if (isValidUser(formValues)) {
                 setLogged(true);
-                console.log("Yeah men");
             }
             else {
 
