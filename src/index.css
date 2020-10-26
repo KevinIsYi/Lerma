@@ -50,4 +50,8 @@ button {
   height: 40px;
 }
 
+.orange-text {
+  color: var(--orange-color);
+}
+
 

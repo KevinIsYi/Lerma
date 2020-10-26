@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Items.css';
 
-export const Items = ({ items }) => {
-    
+export const Items = ({ items = []}) => {
+
     return (
         <div className="items-list">
             {
