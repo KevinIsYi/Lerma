@@ -93,8 +93,18 @@ export const DepartmentsFilter = () => {
                         </button>
                     </div>
                 </div>
+                <div className="filter-section">
+                    <h1>Find by Name</h1>
+                    <input 
+                        className="filter-by-name"
+                        type="text" 
+                        placeholder="Love Lerma"/>
+                </div>
             </div>
-            <Items items={ arrayItems }/>
+            <div className="results-section">
+                <h2>Results</h2>
+                <Items items={ arrayItems }/>
+            </div>
         </section>
     )
 }

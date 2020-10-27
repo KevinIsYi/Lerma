@@ -97,6 +97,7 @@
     font-family: var(--roboto);
     font-weight: bold;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 25px;
     width: 100%;
 }
 
@@ -123,10 +124,33 @@
     filter: brightness(110%);
 }
 
+.filter-by-name {
+    border-color: var(--gray-color);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+    color: var(--roboto);
+    font-family: var(--roboto);
+    padding: 10px 10px 10px 10px;
+    width: 90%;
+}
+
+.results-section h2 {
+    color: var(--gray-color);
+    font-family: var(--anton);
+    font-size: 50px;
+    margin: 30px 0 -10px 0;
+    text-align: center;
+}
+
+
 @media (min-width: 650px) {
     .show-categories {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 50px;
+    }
+    .results-section h2 {
+        margin: 0 0 -10px 0;
     }
 }
 
