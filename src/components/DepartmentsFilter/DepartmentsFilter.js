@@ -21,22 +21,23 @@ export const DepartmentsFilter = () => {
         currentKey: '0'
     });
 
-    const { sliderValue } = values;
+    const { text, sliderValue } = values;
 
-    const changeRange = (e) => {
+    const changeInput = ({ target }) => {
         setValues({
             ...values,
-            sliderValue: e.target.value
+            [ target.name ]: target.value
         });
-        setArrayItems(getDataByCategory({...values, sliderValue: e.target.value}))
+        setArrayItems(getDataByCategory({...values, [ target.name ]: target.value}))
     }
 
     const categoryClic = (id) => {
         setValues({
-            ...values,
+            text: '',
+            sliderValue,
             currentKey: id,
         });
-        setArrayItems(getDataByCategory({...values, currentKey: id}));
+        setArrayItems(getDataByCategory({sliderValue, text: '', currentKey: id}));
         setSelectedButton(['sort-no-focus', 'sort-no-focus']);
     }
 
@@ -71,7 +72,7 @@ export const DepartmentsFilter = () => {
                 </div>
                 <div className="filter-section">
                     <h1>Filter by Price</h1>
-                    <input className="slider" type="range" min="0" max="15000" value={ sliderValue } onChange={ changeRange }/>
+                    <input className="slider" type="range" min="0" max="15000" name="sliderValue" value={ sliderValue } onChange={ changeInput }/>
                     <div className="filter-price-slider-options">
                         <p>Range: $0 - ${ sliderValue }</p>
                     </div>
@@ -98,7 +99,11 @@ export const DepartmentsFilter = () => {
                     <input 
                         className="filter-by-name"
                         type="text" 
-                        placeholder="Love Lerma"/>
+                        placeholder="Love Lerma"
+                        name="text"
+                        value={ text }
+                        onChange={ changeInput }
+                    />
                 </div>
             </div>
             <div className="results-section">
