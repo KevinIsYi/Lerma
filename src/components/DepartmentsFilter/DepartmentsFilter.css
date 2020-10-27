@@ -90,6 +90,39 @@
     color: var(--orange-color);
 }
 
+
+.sort-buttons {
+    display: grid;
+    grid-column-gap: 10px;
+    font-family: var(--roboto);
+    font-weight: bold;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.btn-sort {
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 3px;
+    outline: none;
+    padding: 10px;
+}
+
+.sort-focus {
+    background-color: var(--gray-color);
+    border-color: var(--orange-color);
+    color: var(--orange-color);
+}
+
+.sort-no-focus {
+    background-color: var(--orange-color);
+    border-color: var(--gray-color);
+}
+
+.btn-sort:hover {
+    filter: brightness(110%);
+}
+
 @media (min-width: 650px) {
     .show-categories {
         grid-template-columns: repeat(2, 1fr);
