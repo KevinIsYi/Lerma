@@ -14,3 +14,4 @@ app.listen(process.env.PORT, () => {
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/item', require('./routes/item'));
+app.use('/api/cart', require('./routes/userItem'));
