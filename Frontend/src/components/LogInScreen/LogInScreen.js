@@ -3,7 +3,6 @@ import { FaUser, FaLock, FaAt } from 'react-icons/fa';
 import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../../hooks/useUserContext';
 
-import { isValidUser } from '../../helpers/IsValidUser';
 import { useForm } from '../../hooks/useForm';
 
 import './LogInScreen.css';
@@ -28,6 +27,7 @@ export const LogInScreen = ({ history }) => {
     const { userName, userEmail, userPassword, confirmPassword } = formValues;
     const [ signIn, setSignIn ] = useState(true);
     const [ position, setPosition ] = useState(0);
+    const url = 'http://localhost:4000/api/auth/login';
 
     const changeLayout = () => {
         const newPos = (position + 1) % 2;
@@ -35,15 +35,32 @@ export const LogInScreen = ({ history }) => {
         setPosition(newPos);
     }
 
+    const requestData = async () => {
+        const resp = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: userEmail,
+                password: userPassword
+            })
+        })
+        const res = await resp.json();
+
+        console.log(res);
+
+        if (res.ok) {
+            setLogged(res.id);
+            return true;
+        }
+        return false;
+    }
+
     const formSubmit = (e) => {
         e.preventDefault();
         if (signIn) {
-            if (isValidUser(formValues)) {
-                setLogged(true);
-            }
-            else {
-
-            }
+            requestData();
         }
         else {
             //email-validation, etc
@@ -67,12 +84,12 @@ export const LogInScreen = ({ history }) => {
                             (
                                 <>
                                     <div className="login-input">
-                                        <FaUser className="login-icon" />
+                                        <FaAt className="login-icon"/>
                                         <input 
-                                            type="text" 
-                                            placeholder="Username" 
-                                            name="userName" 
-                                            value={ userName }
+                                            type="email" 
+                                            placeholder="Email"
+                                            name="userEmail" 
+                                            value={ userEmail }
                                             onChange={ handleInputChange }  
                                         />
                                     </div>
@@ -104,7 +121,7 @@ export const LogInScreen = ({ history }) => {
                                     <div className="login-input">
                                         <FaAt className="login-icon"/>
                                         <input 
-                                            type="password" 
+                                            type="email" 
                                             placeholder="E-mail" 
                                             name="userEmail" 
                                             value={ userEmail }
