@@ -7,19 +7,14 @@ const insertInShoppingCart = async ( req, res ) => {
     const { userId, itemId } = body;
 
     const userItem = new UserItem(body);
-<<<<<<< HEAD
     console.log(userItem);
-=======
->>>>>>> 5e2d99961e5a001484f43b4d1b7ca76d4e8ce4fb
+
     userItem.user = userId;
     userItem.item = itemId;
 
     try {
-<<<<<<< HEAD
         await userItem.save();
-=======
         userItem.save();
->>>>>>> 5e2d99961e5a001484f43b4d1b7ca76d4e8ce4fb
         res.json({
             ok: true
         });
@@ -41,7 +36,6 @@ const getCartItems = async ( req, res ) => {
         const itemsId = await UserItem.find({ user: userId });
         const cartItems = [];
 
-<<<<<<< HEAD
         for (const { item, quantity } of itemsId) {
             const currentItem = await ItemSchema.findById(item);
             cartItems.push( {
@@ -49,10 +43,9 @@ const getCartItems = async ( req, res ) => {
                     quantity
                 }
             );
-=======
+        }
         for (const { item } of itemsId) {
             cartItems.push(await ItemSchema.findById(item) );
->>>>>>> 5e2d99961e5a001484f43b4d1b7ca76d4e8ce4fb
         }
         
         res.json({
