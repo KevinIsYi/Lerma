@@ -7,9 +7,9 @@ export const Items = ({ items = []}) => {
     return (
         <div className="items-list">
             {
-                items.map(({ id, name, price }) => (
-                    <div className="card-item" key={ id } >
-                        <img src={ `./assets/items/${ id }.jpg` } alt={ id }/>
+                items.map(({ _id, img, name, price }) => (
+                    <div className="card-item" key={ _id } >
+                        <img src={ `./assets/items/${ img }.jpg` } alt={ img }/>
                         <h1>{ name }</h1>
                         <div className="price-see">
                             <p>${ price }</p>

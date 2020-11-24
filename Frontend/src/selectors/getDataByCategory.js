@@ -1,12 +1,9 @@
-import { data } from '../data/data';
-
-export const getDataByCategory = ( values ) => {
-    const { products } = data;
+export const getDataByCategory = ( products, values ) => {
     const { text, sliderValue, currentKey } = values;
 
-    return products.filter(({ id, name, price }) => (
-        (id[0] === currentKey || currentKey === '0') && 
-        (price <= sliderValue) && 
-        (name.includes(text))
+    return products.filter(({ img, name, price }) => (
+        ( img[0] === currentKey || currentKey === '0' ) && 
+        ( price <= sliderValue ) && 
+        ( name.includes(text) )
     ));
 }

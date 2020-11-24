@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Items } from './Items/Items';
 
 import { categories } from '../../data/categories';
-import { data } from '../../data/data';
 import { getDataByCategory } from '../../selectors/getDataByCategory';
 
 import './DepartmentsFilter.css';
 
 export const DepartmentsFilter = () => {
 
-    const { products } = data;
-    const [ arrayItems, setArrayItems ] = useState(products);
+    const [ arrayItems, setArrayItems ] = useState([  ]);
     const [ selectedButton, setSelectedButton ] = useState(['sort-no-focus', 'sort-no-focus']);
+    const [ products, setProducts ] = useState([]);
 
     const [ ascendant, descendant ] = selectedButton;
     const [ values, setValues ] = useState({
@@ -28,7 +27,7 @@ export const DepartmentsFilter = () => {
             ...values,
             [ target.name ]: target.value
         });
-        setArrayItems(getDataByCategory({...values, [ target.name ]: target.value}))
+        setArrayItems(getDataByCategory(products, {...values, [ target.name ]: target.value}))
     }
 
     const categoryClic = (id) => {
@@ -37,7 +36,7 @@ export const DepartmentsFilter = () => {
             sliderValue,
             currentKey: id,
         });
-        setArrayItems(getDataByCategory({sliderValue, text: '', currentKey: id}));
+        setArrayItems(getDataByCategory(products, {sliderValue, text: '', currentKey: id}));
         setSelectedButton(['sort-no-focus', 'sort-no-focus']);
     }
 
@@ -58,6 +57,20 @@ export const DepartmentsFilter = () => {
 
         setArrayItems(auxArray);
     }
+
+    const getItems = async () => {
+        const url = 'http://localhost:4000/api/item/all';
+        const resp = await fetch(url);
+        const res = await resp.json();
+        
+        const { items } = res;
+        setArrayItems(items);
+        setProducts(items);
+    }
+
+    useEffect(() => { // Petition to backend, [  ] means it will be executed only once
+        getItems();
+    }, [ ]);
 
     return (
         <section className="show-categories">

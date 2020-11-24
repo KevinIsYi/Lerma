@@ -52,6 +52,7 @@ export const LogInScreen = ({ history }) => {
 
         if (res.ok) {
             setLogged(res.id);
+            history.replace('/');
             return true;
         }
         return false;
