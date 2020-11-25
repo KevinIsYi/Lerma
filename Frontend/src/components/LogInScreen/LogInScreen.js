@@ -48,8 +48,6 @@ export const LogInScreen = ({ history }) => {
         })
         const res = await resp.json();
 
-        console.log(res);
-
         if (res.ok) {
             setLogged(res.id);
             history.replace('/');

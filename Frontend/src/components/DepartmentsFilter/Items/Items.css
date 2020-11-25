@@ -30,6 +30,7 @@
     border-radius: 5px;
 }
 
+
 .price-see {
     align-items: center;
     display: flex;
@@ -48,20 +49,28 @@
     border-radius: 50px;
     border-style: solid;
     border-width: 2px;
-    padding: 5px 0;
-    width: 30%;
+    padding: 5px 10px;
 }
 
 .price-see p:last-child {
     background-color: var(--orange-color);
     transition: all ease-in 0.3s;
+    width: 50px;
 }
 
 .price-see p:last-child:hover {
-    background-color: var(--gray-color);
+    filter: opacity(1);
     border-color: var(--orange-color);
     color: var(--orange-color);
     cursor: pointer;
+}
+
+.sent-sc {
+    font-size: 20px;
+}
+
+.sent-sc:hover {
+    color: white;
 }
 
 @media (min-width: 900px) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Media from 'react-media';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import { GrCart } from 'react-icons/gr';
 import { FaBars }  from 'react-icons/fa';
 
 import './Header.css';
+import { UserContext } from '../../hooks/useUserContext';
 
 export const Header = () => {
 
@@ -15,6 +16,9 @@ export const Header = () => {
         mobile: "(max-width: 900px)",
         desktop: "(min-width: 901px)"
     }
+
+    const { isLogged } = useContext(UserContext);
+    const linkTo = isLogged ? '/cart' : '/login';
 
     return (
         <header className="header center">
@@ -48,7 +52,7 @@ export const Header = () => {
                                 <div className="sign-in-section">
                                     <Link to="/login"><VscAccount className="icon" /></Link>
                                     <div className="division" />
-                                    <GrCart className="icon" />
+                                    <Link to={ linkTo }><GrCart className="icon" /></Link>
                                 </div>
                             </>
                         )
