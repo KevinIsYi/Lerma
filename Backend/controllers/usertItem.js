@@ -1,5 +1,6 @@
 const UserItem = require('../models/UserItems');
 const ItemSchema = require('../models/Items');
+const updateGraph = require('./graph');
 
 const insertInShoppingCart = async ( req, res ) => {
     
@@ -88,7 +89,43 @@ const getCartItems = async ( req, res ) => {
     }
 }
 
+const setShoppingCartItems = ( req, res ) => {
+    
+    const { body: { userId, items } } = req;
+    
+    if (!userId || !items) {
+        return res.status(400).json({
+            ok: false,
+            message: 'Params were not received as expected'
+        });
+    }
+
+    try {
+        updateGraph(items);
+        items.forEach(async ( { _id, quantity } ) => {
+
+            //console.log("Aver: ", _id, quantity);
+            const newItem = new UserItem({ user: userId, item: _id, quantity });
+            await newItem.save();        
+        });
+
+        res.json({
+            ok: true,
+            message: 'Purchase was succesfully proccesed'
+        })
+        
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            ok: false,
+            message: 'Failed at updating DB'
+        });
+    }
+}
+
 module.exports = {
     insertInShoppingCart,
-    getCartItems
+    getCartItems,
+    setShoppingCartItems
 }
