@@ -19,8 +19,8 @@ export const LogInScreen = ({ history }) => {
 
     const [ formValues, handleInputChange    ] = useForm({
         'userName': '',
-        'userEmail': '',
-        'userPassword': '',
+        'userEmail': 'ANGEL.DURAN@lerma.com',
+        'userPassword': 'ANDU073',
         'confirmPassword': ''
     });
 
@@ -46,20 +46,20 @@ export const LogInScreen = ({ history }) => {
                 password: userPassword
             })
         })
-        const res = await resp.json();
+        const {ok, id} = await resp.json();
 
-        if (res.ok) {
-            setLogged(res.id);
+        if (ok) {
+            setLogged(id);
+            localStorage.setItem('scitems', JSON.stringify([]));
             history.replace('/');
-            return true;
         }
-        return false;
     }
 
     const formSubmit = (e) => {
         e.preventDefault();
         if (signIn) {
             requestData();
+            history.replace('/');
         }
         else {
             //email-validation, etc

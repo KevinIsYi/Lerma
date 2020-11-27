@@ -9,22 +9,21 @@ export const Items = ({ items = []}) => {
 
     const { isLogged } = useContext(UserContext);
 
-    const addToCart = async ( itemId ) => {
-        const url = 'http://localhost:4000/api/cart'
+    const addToCart = ( id, img, name, price ) => {
+        const items = JSON.parse(localStorage.getItem('scitems'));
+        let find = false;
+        items.forEach(( item, index ) => {
+            if (item._id === id) {
+                const { quantity } = item;
+                items[index].quantity = quantity + 1;
+                find = true;
+            }
+        });
 
-        const resp = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                userId: isLogged,
-                itemId,
-                quantity: 1
-            })
-        })
-        const res = await resp.json();
-        console.log(res);
+        if (!find) {
+            items.push({ _id: id, img, name, price, quantity: 1 });
+        }
+        localStorage.setItem('scitems', JSON.stringify(items));
     }
 
     return ( 
@@ -42,7 +41,7 @@ export const Items = ({ items = []}) => {
                                     <Link to='/login'><p><GrCart className="sent-sc" /></p></Link>
                                 :
                                     <p
-                                        onClick={ () => addToCart(_id)}
+                                        onClick={ () => addToCart(_id, img, name, price)}
                                     >
                                         <GrCart className="sent-sc" />
                                     </p>
