@@ -1,4 +1,5 @@
 const Graph = require('../models/Graph');
+const Item = require('../models/Items');
 
 const printGraph = async (DBGraph) => {
     const translation = {
@@ -99,4 +100,52 @@ const updateGraph = async ( purchases ) => {
     
 }
 
-module.exports = updateGraph;
+const getGraph = async (req, res) => {
+    try {
+        const { body:{ scitems } } = req;
+        const graph = {};
+        for (const itemID of scitems) {
+            const items = await Graph.find({
+                '$or': [
+                    {
+                        'item1': itemID
+                    },
+                    {
+                        'item2': itemID
+                    }
+                ]
+            });
+            
+            items.forEach(({ item1, item2, weight }) => {
+                const recommendationItemId = item1 === itemID ? item2 : item1;
+                if (!graph[recommendationItemId]) {
+                    graph[recommendationItemId] = weight;
+                }
+                else {
+                    graph[recommendationItemId]++;
+                }  
+            });
+        }; 
+
+        const items = [];
+        for (const id in graph) {
+            const item = await Item.findById(id);
+            items.push({ item, weight: graph[id] });
+        }
+
+        res.json({
+            ok: true,
+            items
+        })
+    } catch (error) {
+        res.status(500).json({
+            ok: false,
+            message: 'Failed at fetching from DB'
+        })
+    }
+}
+
+module.exports = {
+    updateGraph,
+    getGraph
+};

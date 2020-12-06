@@ -1,6 +1,6 @@
 const UserItem = require('../models/UserItems');
 const ItemSchema = require('../models/Items');
-const updateGraph = require('./graph');
+const { updateGraph } = require('./graph');
 
 const insertInShoppingCart = async ( req, res ) => {
     
