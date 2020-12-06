@@ -104,6 +104,9 @@ const getGraph = async (req, res) => {
     try {
         const { body:{ scitems } } = req;
         const graph = {};
+        const set = new Set(scitems);
+        console.log(set);
+
         for (const itemID of scitems) {
             const items = await Graph.find({
                 '$or': [
@@ -118,24 +121,28 @@ const getGraph = async (req, res) => {
             
             items.forEach(({ item1, item2, weight }) => {
                 const recommendationItemId = item1 === itemID ? item2 : item1;
-                if (!graph[recommendationItemId]) {
-                    graph[recommendationItemId] = weight;
+                if (!set.has(recommendationItemId)) {
+                    console.log("Entra");
+                    if (!graph[recommendationItemId]) {
+                        graph[recommendationItemId] = weight;
+                    }
+                    else {
+                        graph[recommendationItemId]++;
+                    }  
                 }
-                else {
-                    graph[recommendationItemId]++;
-                }  
             });
         }; 
 
-        const items = [];
+        const recommendations = [];
         for (const id in graph) {
             const item = await Item.findById(id);
-            items.push({ item, weight: graph[id] });
+            recommendations.push({ item, weight: graph[id] });
         }
 
+        console.log(recommendations);
         res.json({
             ok: true,
-            items
+            recommendations
         })
     } catch (error) {
         res.status(500).json({
