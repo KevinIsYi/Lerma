@@ -1,0 +1,36 @@
+.cart-recomendations {
+    margin: auto;
+    width: 95%;
+    text-align: center;
+}
+
+.cart-recomendations h1 {
+    font-family: var(--roboto);
+    text-align: center;
+}
+
+.recommendation {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(288px, 300px));
+    margin: auto;
+}
+
+.recommendation-info {
+    padding: 10px;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.recommendation-info h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.recommendation-info img {
+    max-width: 100%;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.recommendation-info img:hover {
+    cursor: pointer;
+}
